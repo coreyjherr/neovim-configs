@@ -29,3 +29,5 @@ vim.keymap.set({"n", "o", "v"}, "<Leader>b", function() require'hop'.hint_words(
 
 vim.keymap.set({'x', 'o'}, "il", ':<C-u>silent! normal!  $v^<cr>')
 vim.keymap.set({'x', 'o'}, "al", ':<c-u>silent! normal! $v0<cr>')
+
+vim.keymap.set({'n'}, '<Leader>]', '/#%%<CR>:nohl<CR>')
