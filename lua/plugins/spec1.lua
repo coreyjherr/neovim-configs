@@ -18,6 +18,7 @@ return {
     dependencies = {
         "kana/vim-textobj-user"
     }
-}
+},
+{ 'github/copilot.vim', name='copilot'}
 
 }
