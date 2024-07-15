@@ -1,6 +1,9 @@
 return {
 {
-    "hadronized/hop.nvim"
+    "hadronized/hop.nvim",
+    config = function()
+        require("hop").setup()
+    end,
 },
 {
     "kylechui/nvim-surround",
@@ -14,7 +17,7 @@ return {
 },
 { 'dracula/vim' , name='dracula'},
 {
-    'sgur/vim-textobj-parameter', 
+    'sgur/vim-textobj-parameter',
     dependencies = {
         "kana/vim-textobj-user"
     }
