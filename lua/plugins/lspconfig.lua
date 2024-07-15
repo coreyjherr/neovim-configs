@@ -24,7 +24,7 @@ return {
         vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
 
         vim.keymap.set("n", "K", vim.lsp.buf.hover)
-        vim.keymap.set({ 'n', 'i' }, '<C-k>', vim.lsp.buf.signature_help, opts_l)
+        vim.keymap.set({ 'n', 'i' }, '<C-k>', vim.lsp.buf.signature_help)
 
 
         lspconfig.clangd.setup{}
@@ -33,6 +33,6 @@ return {
             Lua = {
               -- make the language server recognize "vim" global
               diagnostics = {
-                globals = { "vim" },}
+                globals = { "vim" },}}}}
     end,
 }
