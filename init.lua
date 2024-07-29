@@ -10,8 +10,6 @@ vim.g.mapleader = "<Space>"
 
 require("config.lazy")
 
-vim.api.nvim_set_hl(0, 'NormalFloat', {bg='#282a36'})
-vim.api.nvim_set_hl(0, 'FloatBorder', {bg='#282a36'})
 
 vim.opt.termguicolors = true
 vim.cmd[[colorscheme dracula]]

@@ -1,5 +1,5 @@
 return {
-{ 'dracula/vim' , name='dracula'},
+{ 'Mofiqul/dracula.nvim' , name='dracula',}
 
 -- { "folke/tokyonight.nvim",
 --   lazy = false,
