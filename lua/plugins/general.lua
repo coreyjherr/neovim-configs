@@ -15,7 +15,6 @@ return {
         })
     end
 },
-{ 'dracula/vim' , name='dracula'},
 {
     'sgur/vim-textobj-parameter',
     dependencies = {
