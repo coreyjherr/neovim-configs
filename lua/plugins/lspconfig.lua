@@ -26,6 +26,8 @@ return {
         vim.keymap.set("n", "K", vim.lsp.buf.hover)
         vim.keymap.set({ 'n', 'i' }, '<C-k>', vim.lsp.buf.signature_help)
 
+        vim.keymap.set('v', '<Leader>1f', vim.lsp.buf.format, {buffer = true})
+
 
         lspconfig.clangd.setup{}
         lspconfig.pyright.setup{}

@@ -26,10 +26,12 @@ return {
                         keymaps = {
                             ['af'] = '@function.outer',
                             ['if'] = '@function.inner',
-                            ['ac'] = '@class.outer',
-                            ['ic'] = '@class.inner',
+                            ['al'] = '@class.outer',
+                            ['il'] = '@class.inner',
                             ['aa'] = '@parameter.outer',
                             ['ia'] = '@parameter.inner',
+                            ['ac'] = '@call.outer',
+                            ['ic'] = '@call.inner',
                         },
                     },
                     move = {
