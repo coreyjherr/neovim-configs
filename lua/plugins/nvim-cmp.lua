@@ -20,13 +20,13 @@ return {
         ["<C-f>"] = cmp.mapping.scroll_docs(4),
         ["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
         ["<C-e>"] = cmp.mapping.abort(), -- close completion window
-        ["<TAB>"] = cmp.mapping.confirm({ select = true }),
+        ["<CR>"] = cmp.mapping.confirm({ select = false }),
       }),
       -- sources for autocompletion
       sources = cmp.config.sources({
         { name = "nvim_lsp_signature_help"},
-        { name = "buffer" , max_item_count = 1}, -- text within current buffer
         { name = "nvim_lsp", max_item_count = 5},
+        -- { name = "buffer" , max_item_count = 1}, -- text within current buffer
         { name = "path" }, -- file system paths
       }),
 
