@@ -10,16 +10,8 @@ vim.g.mapleader = "<Space>"
 
 require("config.lazy")
 
-
 vim.opt.termguicolors = true
 vim.cmd[[colorscheme dracula]]
-
-vim.keymap.set({"n", "o", "v"}, "<Leader><Leader>j", function() require'hop'.hint_lines_skip_whitespace({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR}) end)
-vim.keymap.set({"n", "o", "v"}, "<Leader><Leader>k", function() require'hop'.hint_lines_skip_whitespace({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR}) end)
-vim.keymap.set({"n", "o", "v"}, "<Leader><Leader>l", function() require'hop'.hint_words({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR }) end)
-vim.keymap.set({"n", "o", "v"}, "<Leader><Leader>h", function() require'hop'.hint_words({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR }) end)
-vim.keymap.set({"n", "o", "v"}, "<Leader><Leader>w", function() require'hop'.hint_words({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR }) end)
-vim.keymap.set({"n", "o", "v"}, "<Leader><Leader>b", function() require'hop'.hint_words({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR }) end)
 
 vim.keymap.set({'x', 'o'}, "il", ':<C-u>silent! normal!  $v^<cr>')
 vim.keymap.set({'x', 'o'}, "al", ':<c-u>silent! normal! $v0<cr>')
@@ -27,3 +19,9 @@ vim.keymap.set({'x', 'o'}, "al", ':<c-u>silent! normal! $v0<cr>')
 vim.keymap.set({'n'}, '<Leader>]', '/#%%<cr><cmd>nohl<cr>zz')
 vim.keymap.set("i", "jk", "<Esc>")
 
+
+-- set keymaps for saving and quitting
+vim.keymap.set("n", "<Leader>q", ":q<cr>")
+vim.keymap.set("n", "<Leader>Q", ":q!<cr>")
+vim.keymap.set("n", "<Leader>ww", ":w<cr>")
+vim.keymap.set("n", "<Leader>wq", ":wq<cr>")
