@@ -5,7 +5,7 @@ return {
         config = function()
             local configs = require('nvim-treesitter.configs')
             configs.setup({
-                ensure_installed = {'c', 'bash', 'cpp', 'python', 'lua', 'vimdoc', 'luadoc', 'vim', 'markdown'},
+                ensure_installed = {'c', 'bash', 'cpp', 'python', 'lua', 'vimdoc', 'luadoc', 'vim', 'markdown', 'cuda'},
                 highlight = {
                     -- only enable for languages that have treesitter support
                     enable = true,

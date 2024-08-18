@@ -29,8 +29,8 @@ return {
       desc = "Location List (Trouble)",
     },
     {
-      "<leader>uQ",
-      "<cmd>Trouble qflist toggle<cr>",
+      "<leader>uq",
+      "<cmd>Trouble qflist toggle focus=true<cr>",
       desc = "Quickfix List (Trouble)",
     },
   },
