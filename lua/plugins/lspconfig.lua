@@ -17,6 +17,7 @@ return {
         vim.keymap.set("n", "gd", require'telescope.builtin'.lsp_definitions)
 
         vim.keymap.set("n", "gi", require'telescope.builtin'.lsp_implementations)
+        vim.keymap.set("n", "<Leader>ua", vim.lsp.buf.code_action)
 
         vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)
         vim.keymap.set("n", "<leader>fs", require'telescope.builtin'.lsp_workspace_symbols)
@@ -29,10 +30,10 @@ return {
 
         vim.keymap.set('v', '<Leader>1f', vim.lsp.buf.format, {buffer = true})
 
-
-
         lspconfig.clangd.setup{
-            clangd_config = {init_options = {compilationDatabasePath="build"}}
+            clangd_config = {init_options = {compilationDatabasePath="build"}},
+            filetype = {"c", "cpp", "cuh", "cu"},
+            cmd = {"clangd", "--offset-encoding=utf-16"}
         }
         vim.keymap.set("n", "gh", ":ClangdSwitchSourceHeader<CR>")
         lspconfig.pyright.setup{}
